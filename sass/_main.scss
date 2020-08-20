@@ -1,0 +1,67 @@
+$blue-1: #1e2c69;
+$blue-2: #0b122d;
+$white-1: #b7c4ef;
+$white-2: #c2caf8;
+$main-font: "Raleway";
+$mobile-size: 1050px;
+$mobile-size-2: 650px;
+
+main {
+  display: grid;
+  grid-template-columns: 35% 65%;
+  grid-template-rows: 85%;
+  column-gap: 30px;
+  width: 70%;
+  @media screen and (max-width: $mobile-size) {
+    background-image: url("../images/bg-mobile.png");
+    background-size: cover;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%;
+  }
+}
+
+.section-1,
+.section-2 {
+  background-color: $blue-1;
+  padding: 70px;
+  padding-top: 40px;
+  border-radius: 15px;
+}
+
+.section-1 {
+  border-top-right-radius: 100px;
+  @media screen and (max-width: $mobile-size-2) {
+    padding: 70px 40px;
+  }
+
+  nav {
+    ul {
+      margin-top: 35px;
+      list-style-type: none;
+      display: flex;
+      li {
+        padding: 15px;
+        padding-bottom: 10px;
+        background-color: $blue-2;
+        margin-right: 10px;
+        border-radius: 10px;
+      }
+    }
+  }
+}
+
+.section-2 {
+  margin-top: 45px;
+  padding-right: 15px;
+  padding-left: 15px;
+  header {
+    font-family: $main-font;
+    font-size: 14px;
+    color: $white-1;
+    margin-bottom: 20px;
+    span {
+      color: $white-2;
+      font-weight: 700;
+    }
+  }
+}

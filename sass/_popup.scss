@@ -1,0 +1,46 @@
+$main-font: "Raleway";
+$mobile-size: 1050px;
+$mobile-size-2: 650px;
+
+.popup {
+  position: absolute;
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+  font-family: $main-font;
+  font-weight: 700;
+  font-size: 35px;
+  top: -100px;
+  right: 5px;
+  width: 150px;
+  text-align: center;
+
+  @media screen and (max-width: $mobile-size-2) {
+    top: 70px;
+    right: 20%;
+    font-size: 20px;
+    width: 100px;
+  }
+  span {
+    font-size: 14px;
+    color: gray;
+    @media screen and (max-width: $mobile-size-2) {
+      top: 70px;
+      right: 20%;
+      font-size: 10px;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 90%;
+    right: 0;
+    border-width: 15px;
+    border-style: solid;
+    border-color: white white transparent transparent;
+    @media screen and (max-width: $mobile-size-2) {
+      content: none;
+    }
+  }
+}

@@ -1,0 +1,193 @@
+main {
+  display: grid;
+  grid-template-columns: 35% 65%;
+  grid-template-rows: 85%;
+  column-gap: 30px;
+  width: 70%;
+}
+@media screen and (max-width: 1050px) {
+  main {
+    background-image: url("../images/bg-mobile.png");
+    background-size: cover;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%;
+  }
+}
+
+.section-1,
+.section-2 {
+  background-color: #1e2c69;
+  padding: 70px;
+  padding-top: 40px;
+  border-radius: 15px;
+}
+
+.section-1 {
+  border-top-right-radius: 100px;
+}
+@media screen and (max-width: 650px) {
+  .section-1 {
+    padding: 70px 40px;
+  }
+}
+.section-1 nav ul {
+  margin-top: 35px;
+  list-style-type: none;
+  display: flex;
+}
+.section-1 nav ul li {
+  padding: 15px;
+  padding-bottom: 10px;
+  background-color: #0b122d;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+
+.section-2 {
+  margin-top: 45px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.section-2 header {
+  font-family: "Raleway";
+  font-size: 14px;
+  color: #b7c4ef;
+  margin-bottom: 20px;
+}
+.section-2 header span {
+  color: #c2caf8;
+  font-weight: 700;
+}
+
+figure {
+  background-color: #151e49;
+  border-radius: 13px;
+  /* (height of inner div) / 2 + padding */
+  padding: 3px;
+  margin: 0 5px;
+  height: 20px;
+  position: relative;
+}
+
+.progressbar {
+  background-image: linear-gradient(to right, #ffa399, #ff4d97);
+  width: 80%;
+  height: 20px;
+  border-radius: 10px;
+  position: relative;
+}
+.progressbar .pointerbar {
+  position: absolute;
+  padding: 10px;
+  left: 96.8%;
+  background: #f5faf5;
+  border-radius: 10px;
+}
+@media screen and (max-width: 650px) {
+  .progressbar .pointerbar {
+    left: 91.5%;
+  }
+}
+
+figcaption {
+  position: absolute;
+  margin-top: 10px;
+  font-family: "Raleway";
+  color: #c2caf8;
+  font-weight: 700;
+}
+
+.captiobar-1 {
+  left: 0;
+}
+
+.captiobar-2 {
+  right: 0;
+}
+
+.popup {
+  position: absolute;
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+  font-family: "Raleway";
+  font-weight: 700;
+  font-size: 35px;
+  top: -100px;
+  right: 5px;
+  width: 150px;
+  text-align: center;
+}
+@media screen and (max-width: 650px) {
+  .popup {
+    top: 70px;
+    right: 20%;
+    font-size: 20px;
+    width: 100px;
+  }
+}
+.popup span {
+  font-size: 14px;
+  color: gray;
+}
+@media screen and (max-width: 650px) {
+  .popup span {
+    top: 70px;
+    right: 20%;
+    font-size: 10px;
+  }
+}
+.popup::after {
+  content: "";
+  position: absolute;
+  top: 90%;
+  right: 0;
+  border-width: 15px;
+  border-style: solid;
+  border-color: white white transparent transparent;
+}
+@media screen and (max-width: 650px) {
+  .popup::after {
+    content: none;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  background: #0c122c;
+  background-image: url("../images/bg-desktop.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100% 50%;
+  display: grid;
+  place-items: center;
+}
+@media screen and (max-width: 1050px) {
+  body {
+    background-image: url("../images/bg-mobile.png");
+    background-size: cover;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  font-family: "Raleway";
+  text-align: center;
+  color: white;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+/*# sourceMappingURL=styles.css.map */

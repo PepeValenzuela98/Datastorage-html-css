@@ -1,0 +1,42 @@
+@use "main";
+@use "progressbar";
+@use "popup";
+
+$background-color: #0c122c;
+$main-font: "Raleway";
+$mobile-size: 1050px;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  background: $background-color;
+  background-image: url("../images/bg-desktop.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100% 50%;
+  display: grid;
+  place-items: center;
+  @media screen and (max-width: $mobile-size) {
+    background-image: url("../images/bg-mobile.png");
+    background-size: cover;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  font-family: $main-font;
+  text-align: center;
+  color: white;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

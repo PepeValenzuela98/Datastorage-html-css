@@ -1,0 +1,54 @@
+$white-2: #c2caf8;
+$white-3: #f5faf5;
+$blue-3: #151e49;
+$gradient-primary: #ffa399;
+$gradient-secondary: #ff4d97;
+$main-font: "Raleway";
+$mobile-size: 1050px;
+$mobile-size-2: 650px;
+
+figure {
+  background-color: $blue-3;
+  border-radius: 13px; /* (height of inner div) / 2 + padding */
+  padding: 3px;
+  margin: 0 5px;
+  height: 20px;
+  position: relative;
+}
+
+.progressbar {
+  background-image: linear-gradient(
+    to right,
+    $gradient-primary,
+    $gradient-secondary
+  );
+  width: 80%;
+  height: 20px;
+  border-radius: 10px;
+  position: relative;
+  .pointerbar {
+    position: absolute;
+    padding: 10px;
+    left: 96.8%;
+    background: $white-3;
+    border-radius: 10px;
+    @media screen and (max-width: $mobile-size-2) {
+      left: 91.5%;
+    }
+  }
+}
+
+figcaption {
+  position: absolute;
+  margin-top: 10px;
+  font-family: $main-font;
+  color: $white-2;
+  font-weight: 700;
+}
+
+.captiobar-1 {
+  left: 0;
+}
+.captiobar-2 {
+  right: 0;
+}
